@@ -28,6 +28,9 @@ module.exports = {
         'popover-foreground': 'hsl(var(--popover-foreground))',
         card: 'hsl(var(--card))',
         'card-foreground': 'hsl(var(--card-foreground))',
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
       },
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
