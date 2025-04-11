@@ -27,11 +27,34 @@ module.exports = {
         'card-foreground': 'oklch(var(--card-foreground) / <alpha-value>)',
         input: 'oklch(var(--input) / <alpha-value>)',
         ring: 'oklch(var(--ring) / <alpha-value>)',
+        border: 'oklch(var(--border) / <alpha-value>)',
       },
-      borderColor: {
-        DEFAULT: 'oklch(var(--border) / <alpha-value>)',
-        border: 'oklch(var(--border) / <alpha-value>)', // <== ADICIONA border-border
-      },
+      backgroundColor: theme => ({
+        background: theme('colors.background'),
+        card: theme('colors.card'),
+        popover: theme('colors.popover'),
+        primary: theme('colors.primary'),
+        secondary: theme('colors.secondary'),
+        muted: theme('colors.muted'),
+        accent: theme('colors.accent'),
+      }),
+      textColor: theme => ({
+        foreground: theme('colors.foreground'),
+        'primary-foreground': theme('colors.primary-foreground'),
+        'secondary-foreground': theme('colors.secondary-foreground'),
+        'muted-foreground': theme('colors.muted-foreground'),
+        'accent-foreground': theme('colors.accent-foreground'),
+        'popover-foreground': theme('colors.popover-foreground'),
+        'card-foreground': theme('colors.card-foreground'),
+      }),
+      borderColor: theme => ({
+        DEFAULT: theme('colors.border'),
+        border: theme('colors.border'),
+        input: theme('colors.input'),
+      }),
+      outlineColor: theme => ({
+        ring: theme('colors.ring'),
+      }),
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
       },

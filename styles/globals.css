@@ -94,8 +94,8 @@
   }
 
   * {
-    @apply border transition-colors duration-300;
-    outline-color: hsl(var(--ring) / 0.5);
+    @apply border border-border transition-colors duration-300;
+    outline-color: oklch(var(--ring) / 0.5);
   }
 
   body {
@@ -103,4 +103,3 @@
     font-family: Arial, Helvetica, sans-serif;
   }
 }
-
