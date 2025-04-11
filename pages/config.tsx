@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 import jwtDecode from 'jwt-decode';
 import { useRouter } from 'next/router';
-import { Sidebar } from '@/components/dashboard/Sidebar';
+import Sidebar  from '@/components/SideBar';
 
 interface DecodedToken {
   userId: string;
