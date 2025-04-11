@@ -1,5 +1,3 @@
-// tailwind.config.js
-
 /** @type {import('tailwindcss').Config} */
 const { fontFamily } = require('tailwindcss/defaultTheme');
 
@@ -13,24 +11,23 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // cores base para usar com temas (mantendo compatibilidade com shadcn/ui)
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
-        primary: 'hsl(var(--primary))',
-        'primary-foreground': 'hsl(var(--primary-foreground))',
-        secondary: 'hsl(var(--secondary))',
-        'secondary-foreground': 'hsl(var(--secondary-foreground))',
-        muted: 'hsl(var(--muted))',
-        'muted-foreground': 'hsl(var(--muted-foreground))',
-        accent: 'hsl(var(--accent))',
-        'accent-foreground': 'hsl(var(--accent-foreground))',
-        popover: 'hsl(var(--popover))',
-        'popover-foreground': 'hsl(var(--popover-foreground))',
-        card: 'hsl(var(--card))',
-        'card-foreground': 'hsl(var(--card-foreground))',
-        border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
-        ring: 'hsl(var(--ring))',
+        background: 'oklch(var(--background) / <alpha-value>)',
+        foreground: 'oklch(var(--foreground) / <alpha-value>)',
+        primary: 'oklch(var(--primary) / <alpha-value>)',
+        'primary-foreground': 'oklch(var(--primary-foreground) / <alpha-value>)',
+        secondary: 'oklch(var(--secondary) / <alpha-value>)',
+        'secondary-foreground': 'oklch(var(--secondary-foreground) / <alpha-value>)',
+        muted: 'oklch(var(--muted) / <alpha-value>)',
+        'muted-foreground': 'oklch(var(--muted-foreground) / <alpha-value>)',
+        accent: 'oklch(var(--accent) / <alpha-value>)',
+        'accent-foreground': 'oklch(var(--accent-foreground) / <alpha-value>)',
+        popover: 'oklch(var(--popover) / <alpha-value>)',
+        'popover-foreground': 'oklch(var(--popover-foreground) / <alpha-value>)',
+        card: 'oklch(var(--card) / <alpha-value>)',
+        'card-foreground': 'oklch(var(--card-foreground) / <alpha-value>)',
+        border: 'oklch(var(--border) / <alpha-value>)',
+        input: 'oklch(var(--input) / <alpha-value>)',
+        ring: 'oklch(var(--ring) / <alpha-value>)',
       },
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
