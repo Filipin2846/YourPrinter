@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { cn } from '@/lib/utils';
-import ThemeToggle  from './ThemeToggle';
+import ThemeToggle  from '../ThemeToggle';
 
 const links = [
   { href: '/dashboard', label: 'Início' },
