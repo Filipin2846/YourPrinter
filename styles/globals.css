@@ -94,7 +94,8 @@
   }
 
   * {
-    @apply border outline-ring/50 transition-colors duration-300;
+    @apply border transition-colors duration-300;
+    outline-color: hsl(var(--ring) / 0.5);
   }
 
   body {
