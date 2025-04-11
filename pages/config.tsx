@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
-import jwtDecode from 'jwt-decode';
+import jwt_decode from 'jwt-decode';
 import { useRouter } from 'next/router';
 import Sidebar  from '@/components/SideBar';
 
@@ -24,7 +24,7 @@ export default function ConfiguracoesPage() {
     const token = Cookies.get('token');
     if (token) {
       try {
-        const decoded = jwtDecode<DecodedToken>(token);
+        const decoded = jwt_decode<DecodedToken>(token);
         setUser(decoded);
       } catch (err) {
         console.error('Erro ao decodificar token:', err);
