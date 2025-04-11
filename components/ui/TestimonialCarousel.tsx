@@ -58,7 +58,7 @@ export default function TestimonialCarousel() {
               height={80}
               className="rounded-full"
             />
-            <p className="text-sm text-muted-foreground italic">"{testimonial.feedback}"</p>
+            <p className="text-sm text-muted-foreground italic">&quot{testimonial.feedback}&quot</p>
             <span className="font-medium text-sm">{testimonial.name}</span>
           </div>
         ))}

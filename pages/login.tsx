@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import { loginUser } from '@/services/auth';
 import Cookies from 'js-cookie';
 import jwtDecode from 'jwt-decode';
+import Link from 'next/link'
 
 export default function LoginPage() {
   const router = useRouter();
@@ -89,9 +90,9 @@ export default function LoginPage() {
 
         <p className="text-center text-sm text-gray-500 mt-4">
           Não tem conta?{' '}
-          <a href="/register" className="text-blue-600 hover:underline">
+          <Link href="/register" className="text-blue-600 hover:underline">
             Criar conta
-          </a>
+          </Link>
         </p>
       </div>
     </main>
