@@ -25,9 +25,12 @@ module.exports = {
         'popover-foreground': 'oklch(var(--popover-foreground) / <alpha-value>)',
         card: 'oklch(var(--card) / <alpha-value>)',
         'card-foreground': 'oklch(var(--card-foreground) / <alpha-value>)',
-        border: 'oklch(var(--border) / <alpha-value>)',
         input: 'oklch(var(--input) / <alpha-value>)',
         ring: 'oklch(var(--ring) / <alpha-value>)',
+      },
+      borderColor: {
+        DEFAULT: 'oklch(var(--border) / <alpha-value>)',
+        border: 'oklch(var(--border) / <alpha-value>)', // <== ADICIONA border-border
       },
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
