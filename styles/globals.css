@@ -43,7 +43,6 @@
   --chart-5: oklch(0.769 0.188 70.08);
 }
 
-/* Preferência de cor do sistema */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -51,7 +50,6 @@
   }
 }
 
-/* Dark Mode Manual */
 .dark {
   --background: oklch(0.129 0.042 264.695);
   --foreground: oklch(0.984 0.003 247.858);
@@ -72,7 +70,6 @@
   --input: oklch(1 0 0 / 15%);
   --ring: oklch(0.551 0.027 264.364);
 
-  /* Sidebar */
   --sidebar: oklch(0.208 0.042 265.755);
   --sidebar-foreground: oklch(0.984 0.003 247.858);
   --sidebar-primary: oklch(0.488 0.243 264.376);
@@ -83,7 +80,6 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
-/* Base layer */
 @layer base {
   html,
   body {
