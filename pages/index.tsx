@@ -1,4 +1,3 @@
-// pages/index.tsx
 import Head from "next/head"
 import Image from "next/image"
 import Link from "next/link"
@@ -57,9 +56,10 @@ export default function Home() {
           <section className="space-y-6">
             <h2 className="text-2xl font-bold">Produtos em Destaque</h2>
             <div className="grid gap-6 md:grid-cols-3">
+              {/* Atualizando a imagem para um caminho válido */}
               <div className="rounded-lg border bg-card p-4 shadow-sm space-y-2">
                 <Image
-                  src="/produto-teste.png"
+                  src="/images/produto-teste.png"  // Alterado para um caminho correto
                   alt="Produto Teste"
                   width={400}
                   height={300}
@@ -78,7 +78,7 @@ export default function Home() {
           <section className="space-y-6">
             <h2 className="text-2xl font-bold text-center">Como Funciona</h2>
             <div className="grid gap-8 md:grid-cols-3">
-              {[
+              {[  // Passando as etapas do processo
                 {
                   title: "1. Cadastre",
                   description: "Adicione sua impressora 3D ou produtos em poucos cliques.",
@@ -124,7 +124,7 @@ export default function Home() {
             </div>
             <div className="w-48 h-48 md:w-64 md:h-64 z-0 opacity-60 md:opacity-90">
               <Image
-                src="/images/printer-illustration.png"
+                src="/images/printer-illustration.png" // Alterado para um caminho correto
                 alt="Impressora 3D"
                 width={300}
                 height={300}
