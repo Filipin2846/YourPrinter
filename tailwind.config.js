@@ -55,6 +55,7 @@ module.exports = {
         ...theme('colors'),
       }),
       borderColor: theme => ({
+        DEFAULT: theme('colors.border'),
         ...theme('colors'),
       }),
       outlineColor: theme => ({
