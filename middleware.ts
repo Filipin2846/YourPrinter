@@ -18,11 +18,14 @@ export function middleware(req: NextRequest) {
     pathname === path || pathname.startsWith(`${path}/`)
   );
 
+  const isHome = pathname === '/';
+
   if (token) {
     try {
       jwt.verify(token, process.env.JWT_SECRET_KEY!);
 
-      if (isPublic) {
+      // Se for rota pública mas NÃO a home, redireciona
+      if (isPublic && !isHome) {
         return NextResponse.redirect(new URL('/dashboard', req.url));
       }
 
@@ -41,7 +44,7 @@ export function middleware(req: NextRequest) {
   return NextResponse.next();
 }
 
-// MUITO IMPORTANTE para produção
+// Muito importante para produção
 export const config = {
   matcher: ['/((?!_next/static|_next/image|favicon.ico).*)'],
 };
