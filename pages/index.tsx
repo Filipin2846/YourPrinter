@@ -40,6 +40,7 @@ export default function Home() {
               description="Cadastre sua impressora ou produtos 3D e comece a vender ou alugar."
               buttonText="Cadastrar Produto"
               href="/dashboard/impressoras"
+              variant="outline"
             />
             <ActionCard
               title="Quero Imprimir"
@@ -117,7 +118,7 @@ export default function Home() {
                 Cadastre-se e comece a lucrar agora mesmo imprimindo para outras pessoas.
               </p>
               <Link href="/register">
-                <Button className="bg-white text-black hover:bg-gray-200 transition-colors">
+                <Button className="bg-dark text-black hover:bg-gray-200 transition-colors">
                   Quero começar
                 </Button>
               </Link>

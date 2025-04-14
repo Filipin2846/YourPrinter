@@ -3,7 +3,9 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { cn } from '@/lib/utils';
-import ThemeToggle  from '../ThemeToggle';
+import ThemeToggle from '../ThemeToggle';
+import { Button } from '@/components/ui/button';
+import { LogOut } from 'lucide-react';
 
 const links = [
   { href: '/dashboard', label: 'Início' },
@@ -34,7 +36,15 @@ export default function Sidebar() {
         </nav>
       </div>
 
-      <div className="pt-4 border-t">
+      <div className="flex flex-col gap-2 border-t pt-4">
+        {/* Botão de Logout com ícone */}
+        <Link href="/logout">
+          <Button variant="ghost" className="justify-start w-full text-left gap-2">
+            <LogOut className="w-4 h-4" />
+            Sair
+          </Button>
+        </Link>
+
         <ThemeToggle />
       </div>
     </aside>

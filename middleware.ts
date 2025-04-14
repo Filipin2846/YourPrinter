@@ -14,11 +14,13 @@ export function middleware(req: NextRequest) {
   const token = req.cookies.get('token')?.value || '';
   const { pathname } = req.nextUrl;
 
-  const isPublic = PUBLIC_PATHS.some((path) => pathname.startsWith(path));
+  const isPublic = PUBLIC_PATHS.some((path) =>
+    pathname === path || pathname.startsWith(`${path}/`)
+  );
 
   if (token) {
     try {
-      const decoded = jwt.verify(token, process.env.JWT_SECRET_KEY!) as DecodedToken;
+      jwt.verify(token, process.env.JWT_SECRET_KEY!);
 
       if (isPublic) {
         return NextResponse.redirect(new URL('/dashboard', req.url));
@@ -38,3 +40,8 @@ export function middleware(req: NextRequest) {
 
   return NextResponse.next();
 }
+
+// MUITO IMPORTANTE para produção
+export const config = {
+  matcher: ['/((?!_next/static|_next/image|favicon.ico).*)'],
+};
